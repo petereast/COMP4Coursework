@@ -1,83 +1,33 @@
 \chapter{Analysis}
 
 \section{Introduction}
-ghtsxjtjrtjxtx
-\subsection{Client Identification}
-The client approached me and asked for a system for demonstrating phyiscal interactions between 2d objects, with the specific purpose of to help teach the new specification of physics AS. The deployment of this system will be in a sixth form college with approximately 60 students studying physics at AS level, often during class time, fixed simulations are used to demonstrate key points, however, these are limited.
-\subsection{Define the current system}
-The current system uses 'fixed' simulations downloaded from the internet, these are customisable, to a limited degree as in you can change the values during the simulation, however you cannot create customised environments.
-\subsection{Describe the problems}
-The main problem is that the current software is not adaptable to the specific requirements of the college, or the students. This means that the students are limited to a set list of possibilities with which they can experiment.
-\subsection{Section appendix}
 
-\section{Investigation}
+\section{The Client & Users}
+The client is the physics department of Long Road Sixth Form College, who have requested software to demontsrate the core concepts within the new specification AS Physics. The client has requested that the software can be used by both the students and the teachers both inside and outside of class, therfore, the software should work on college PCs without any additional resources (assuming the PC has python3, OpenGL and PyQt installed, which is standard installation in Long Road Sixth Form). The simulation and rendering needs to work in real time (or faster) and it needs to be easy to use.
 
-\subsection{The current system}
+\section{Specific Requirements}
+The physics that the simulator is capable of demonstrating should match the Mechanics section of the new specification physics AS, the specific list of physical phenomena that should be simulated are: 
+\begin{itemize}
+	\item Gravity  - objects should be subject to gravity
+	\item Collisions
+	\begin{itemize}
+		\item Basic collisions - Objects should not overlap
+		\item Bounce - Objects should bounce (see momentum)
+	\end{itemize}
+	\item Kinematics - Objects should use the basic rules of kinematics to determine their movement
+	\item Forces - Objects should exert forces on eachother, and react to forces and impulse
+	\item Centre of Gravity and Moment - Objects should have a centre of gravity, and they should have moments.
+\end{itemize}
 
-\subsubsection{Data sources and destinations}
+The simulator program should also have the following utility features:
+\begin{itemize}
+	\item Save/Load Simulations - The program should be able to save and load simulations at a certain state
+	\item The ability to change the time scale of the simulation.
+	\item The software needs to execute in approximately real time (24fps)
+	\item The software needs some way of representing the pysical object as a text file. (JSON)
 
-\subsubsection{Algorithms}
+\end{itemize}
 
-\subsubsection{Data flow diagram}
 
-\subsubsection{Input Forms, Output Forms, Report Formats}
-
-\subsection{The proposed system}
-
-\subsubsection{Data sources and destinations}
-
-\subsubsection{Data flow diagram}
-
-\subsubsection{Data dictionary}
-
-\subsubsection{Volumetrics}
-
-\section{Objectives}
-
-\subsection{General Objectives}
-
-\subsection{Specific Objectives}
-
-\subsection{Core Objectives}
-
-\subsection{Other Objectives}
-
-\section{ER Diagrams and Descriptions}
-
-\subsection{ER Diagram}
-
-\subsection{Entity Descriptions}
-
-\section{Object Analysis}
-
-\subsection{Object Listing}
-
-\subsection{Relationship diagrams}
-
-\subsection{Class definitions}
-
-\section{Other Abstractions and Graphs}
-
-\section{Constraints}
-
-\subsection{Hardware}
-
-\subsection{Software}
-
-\subsection{Time}
-
-\subsection{User Knowledge}
-
-\subsection{Access restrictions}
-
-\section{Limitations}
-
-\subsection{Areas which will not be included in computerisation}
-
-\subsection{Areas considered for future computerisation}
-
-\section{Solutions}
-
-\subsection{Alternative solutions}
-
-\subsection{Justification of chosen solution}
+\section{Summary}
+In short, the system that I propose will add another degree of interactivity to the AS course, and it'll accurately demonstrate a conprehensive set of physical laws and relationships that will be covered in the new specification AS. The software will be a freely scriptable physics engine, rather than a fixed set of customiseable simulations - it could maybe even be developed into a 2d game engine, this means that the user will be able to create a 2d world from scratch and use it to demonstrate, experiment, or just play with any physical object that they can define.
