@@ -2,32 +2,37 @@
 
 \section{Introduction}
 
-\section{The Client & Users}
+\section{The Client and Users}
 The client is the physics department of Long Road Sixth Form College, who have requested software to demontsrate the core concepts within the new specification AS Physics. The client has requested that the software can be used by both the students and the teachers both inside and outside of class, therfore, the software should work on college PCs without any additional resources (assuming the PC has python3, OpenGL and PyQt installed, which is standard installation in Long Road Sixth Form). The simulation and rendering needs to work in real time (or faster) and it needs to be easy to use.
 
 \section{Specific Requirements}
-The physics that the simulator is capable of demonstrating should match the Mechanics section of the new specification physics AS, the specific list of physical phenomena that should be simulated are: 
+The specific requirements for this simulator can be derived from the Physics AS new specification (2015), a list of which are:
 \begin{itemize}
-	\item Gravity  - objects should be subject to gravity
+	\item Gravity  - objects should be subject to gravity.
 	\item Collisions
 	\begin{itemize}
-		\item Basic collisions - Objects should not overlap
-		\item Bounce - Objects should bounce (see momentum)
+		\item Basic collisions - Objects should not overlap.
+		\item Bounce - Objects should bounce (see momentum).
 	\end{itemize}
-	\item Kinematics - Objects should use the basic rules of kinematics to determine their movement
-	\item Forces - Objects should exert forces on eachother, and react to forces and impulse
+	\item Kinematics - Objects should use the basic rules of kinematics to determine their movement.
+	\item Forces - Objects should exert forces on eachother, and react to forces and impulse.
 	\item Centre of Gravity and Moment - Objects should have a centre of gravity, and they should have moments.
+	\item Momentum and Impulse - Objects should simulate the effects of momentum and impulse according to Newton's laws.
 \end{itemize}
 
 The simulator program should also have the following utility features:
 \begin{itemize}
-	\item Save/Load Simulations - The program should be able to save and load simulations at a certain state
+	\item Save/Load Simulations - The program should be able to save and load simulations at a certain state.
 	\item The ability to change the time scale of the simulation.
-	\item The software needs to execute in approximately real time (24fps)
+	\item The software needs to execute in approximately real time (at least 15fps).
 	\item The software needs some way of representing the pysical object as a text file. (JSON)
 
 \end{itemize}
 
+\section{Processing Requirements}
+One of the key requirements for this system is that the simulation runs and renders smoothly, at approximately real time, this means that it is of paramount importance that the code is written in such a way that it executes quickly, and that it manages the host PC's resources efficiently. All of the college PCs have multicore processors, but they do not have dedicated GPUs which would ease the CPU strain for real-time physics simulation. This means that the system will have to use multithreading to accelerate the simulation and the rendering.
+
+If all else fails, and the simulator doesn't render in real time, there should be an option to reduce the output resolution scaling, which should dramatically reduce the processing required to simulate and render.
 
 \section{Summary}
 In short, the system that I propose will add another degree of interactivity to the AS course, and it'll accurately demonstrate a conprehensive set of physical laws and relationships that will be covered in the new specification AS. The software will be a freely scriptable physics engine, rather than a fixed set of customiseable simulations - it could maybe even be developed into a 2d game engine, this means that the user will be able to create a 2d world from scratch and use it to demonstrate, experiment, or just play with any physical object that they can define.
