@@ -41,6 +41,8 @@ If all else fails, and the simulator doesn't render in real time, there should b
 \subsection{Storage}
 	The user's input will be stored in table within a database file. That data will then be used to generate an initial frame, which is then in turn stored in the same database. As each frame is generated, it'll store it in this same database file. This means that there are three 'frames' stored in the database: A pre-initial frame, which has the raw data that the user input, an initial frame which contains the generated data for the first frame; and the latest frame simulated. The following path will be followed: Render - Simulate - Store - Render - Simulate etc.
 
+\subsection{Database}
+
 \subsubsection{Entity Relationship Diagrams}
 	Here is where I'll put the entity relationship diagrams
 
@@ -49,7 +51,7 @@ If all else fails, and the simulator doesn't render in real time, there should b
 
 
 \subsection{Output}
-	The simulation will be output to and OpenGL window.
+	The simulation data will be  converted into an updated serires of shapes and positions which will be drawn to an OpenGL window. To the user, this should appear to be a stable, flowing animation of the shapes moving, rather than a set of individual frames.
 
 
 
