@@ -37,10 +37,17 @@ If all else fails, and the simulator doesn't render in real time, there should b
 \section{Data Flow}
 \subsection{Input}
 	The user will input some or all of the physical values into an input form. The simulation is designed to be open, so that the user can enter as many or as few properties as they want.
+
 \subsection{Storage}
 	The user's input will be stored in table within a database file. That data will then be used to generate an initial frame, which is then in turn stored in the same database. As each frame is generated, it'll store it in this same database file. This means that there are three 'frames' stored in the database: A pre-initial frame, which has the raw data that the user input, an initial frame which contains the generated data for the first frame; and the latest frame simulated. The following path will be followed: Render - Simulate - Store - Render - Simulate etc.
+
 \subsubsection{Entity Relationship Diagrams}
 	Here is where I'll put the entity relationship diagrams
+
+\subsubsection{Data flow diagrams}
+	DFDs		
+
+
 \subsection{Output}
 	The simulation will be output to and OpenGL window.
 
