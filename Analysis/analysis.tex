@@ -65,6 +65,10 @@ The simulator program should also have the following utility features:
 
 	As far as rendering the simulation is concerned, OpenGL will have all the low-level code already covered, all I have to do is set up a render pipeline and get it to animate, this means that I won't have to deal with OS or platform specific system requirements hence my application will be portable enough to work on most, if not all College PCs.
 
+	\subsubsubsection{note:}
+		The FPS should determine the increment of \textit{t}
+
+
 \section{Constraints}
 		\subsection{Processing Requirements}
 			One of the key requirements for this system is that the simulation runs and renders smoothly, at approximately real time, this means that it is of paramount importance that the code is written in such a way that it executes quickly, and that it manages the host PC's resources efficiently. All of the college PCs have multicore processors, but they do not have dedicated GPUs which would ease the CPU strain for real-time physics simulation. This means that the system will have to use multithreading to accelerate the simulation and the rendering.
