@@ -36,6 +36,7 @@ The simulator program should also have the following utility features:
 	\subsection{Data Storage}
 		The current system does not store the data from these equations peristantly.
 
+
 \section{Processing Requirements}
 One of the key requirements for this system is that the simulation runs and renders smoothly, at approximately real time, this means that it is of paramount importance that the code is written in such a way that it executes quickly, and that it manages the host PC's resources efficiently. All of the college PCs have multicore processors, but they do not have dedicated GPUs which would ease the CPU strain for real-time physics simulation. This means that the system will have to use multithreading to accelerate the simulation and the rendering.
 
@@ -60,7 +61,10 @@ If all else fails, and the simulator doesn't render in real time, there should b
 \subsection{Output}
 	The simulation data will be  converted into an updated serires of shapes and positions which will be drawn to an OpenGL window. To the user, this should appear to be a stable, flowing animation of the shapes moving, rather than a set of individual frames.
 
+\section{Possible Methods of Solution}
+	There are many existing physics frameworks and they the majority of them work using the same basic mathematical functions to get the change in state of an object. A simplified version of these equations is required for deomonstrations at AS level, so for this software I would have to write bespoke versions of the existing frameworks.
 
+	As far as rendering the simulation is concerned, OpenGL will have all the low-level code already covered, all I have to do is set up a render pipeline and get it to animate, this means that I won't have to deal with OS or platform specific system requirements hence my application will be portable enough to work on most, if not all College PCs.
 
 
 \section{Summary}
