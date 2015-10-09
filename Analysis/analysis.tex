@@ -33,16 +33,18 @@ The simulator program should also have the following utility features:
 
 	\subsection{Algorithms}
 		The current system uses a series of physical equations and formulae to find the values of physical quantities at a certain time - they're always expressed in terms of \textit{t}(time) and they all can be derived to find the position of a physical body. So the algorithms in are for changing the official SI equations and formulae algebreically so that they're in terms of \textit{t}.
-		
+
 	\subsection{Data Storage}
 		The current system does not store the data from these equations peristantly.
 
 	\subsection{Data Flow}
 		This section is going to need data flow diagrams.
 
-
-\section{Processing Requirements}
-One of the key requirements for this system is that the simulation runs and renders smoothly, at approximately real time, this means that it is of paramount importance that the code is written in such a way that it executes quickly, and that it manages the host PC's resources efficiently. All of the college PCs have multicore processors, but they do not have dedicated GPUs which would ease the CPU strain for real-time physics simulation. This means that the system will have to use multithreading to accelerate the simulation and the rendering.
+\section{Constraints}
+	\subsection{Processing Requirements}
+		One of the key requirements for this system is that the simulation runs and renders smoothly, at approximately real time, this means that it is of paramount importance that the code is written in such a way that it executes quickly, and that it manages the host PC's resources efficiently. All of the college PCs have multicore processors, but they do not have dedicated GPUs which would ease the CPU strain for real-time physics simulation. This means that the system will have to use multithreading to accelerate the simulation and the rendering.
+	\subsection{Storage Requirements}
+		This system will not require more than a couple of megabytes for each of the database files, probably much less depending on how many objects are defined within them. 
 
 If all else fails, and the simulator doesn't render in real time, there should be an option to reduce the output resolution scaling, which should dramatically reduce the processing required to simulate and render.
 
