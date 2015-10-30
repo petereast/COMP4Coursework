@@ -7,5 +7,5 @@ Purchase Request,"Items, Quantity, Cost, When","{Sennheiser ew300 fn3 Microphone
 Support Ticket,"What, when","{item}, Tuesday 2nd Oct",Prioritized list of support tickets
 List of support tickets,"What, when","{item}, Tuesday 2nd Oct",Personal Task list
 Personal Task list,"What, details, deadline","Support Ticket, {ticket}, Wednesday 3rd Oct",Weekly adgenda
-Cafe Stock item,"What, Cost","Teabags, £0.01",Cafe Resources List
-Cafe Resources List,"{cafe stock item}, quantity","{teabags, £0.01}, 50",
+Cafe Stock item,"What, Cost","Teabags, £0.01",Cafe Resource
+Cafe Resource,"{cafe stock item}, quantity","{teabags, £0.01}, 50",Cafe Resources List

@@ -87,6 +87,25 @@ And for the resources stock management:
 
 \subsubsection{Data sources and destinations}
 
+\begin{table}[]
+\centering
+\caption{My caption}
+\label{my-label}
+\begin{tabular}{llll}
+Source                  & Data                           & Example                                                                & Destination                         \\
+Member                  & Name, Contact info, other info & John Smith, jsmith@smithmail.com                                       & Member's database                   \\
+Appointment/Meeting     & Where, when and who            & John Smith, Meeting room 4, Thurstay 4th Oct                           & Appointments database               \\
+Apointment entity       & Where, when and who            & John Smith and James East, jsmith@smithmail.com                        & Personal Appointments list          \\
+Item                    & What, Cost                     & Sennheiser ew300 fn3 Microphone, £800                                  & Items Database                      \\
+Purchase Request        & Items, Quantity, Cost, When    & \{Sennheiser ew300 fn3 Microphone, £800\}, 5, £4000, Wednesday 3rd Oct & Purchase Request database           \\
+Support Ticket          & What, when                     & \{item\}, Tuesday 2nd Oct                                              & Prioritized list of support tickets \\
+List of support tickets & What, when                     & \{item\}, Tuesday 2nd Oct                                              & Personal Task list                  \\
+Personal Task list      & What, details, deadline        & Support Ticket, \{ticket\}, Wednesday 3rd Oct                          & Weekly adgenda                      \\
+Cafe Stock item         & What, Cost                     & Teabags, £0.01                                                         & Cafe Resource                       \\
+Cafe Resource           & \{cafe stock item\}, quantity  & \{teabags, £0.01\}, 50                                                 & Cafe Resources List
+\end{tabular}
+\end{table}
+
 \subsubsection{Data flow diagram}
 
 \subsubsection{Data dictionary}
