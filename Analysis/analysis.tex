@@ -55,6 +55,28 @@ Because the Church relies on information being shared between different people w
 
 
 \subsubsection{Algorithms}
+ The current system uses few algorithms for it's operations, for the current system doesn't actually do anything, it simply tells people to do things.
+For Pastoral or Support tickets:
+\begin{algorithm}[H]
+	\caption{Support Referral request:}
+	\begin{algorithmic}[1]
+		\RECEIVE{$The problem$}
+		\Repeat
+			\RECEIVE{$Is the problem solved?$}
+		\Until{$Problem is solved$}
+	\end{algorithmic}
+\end{algorithm}
+
+And for the resources stock management:
+\begin{algorithm}[H]
+	\caption{Stock management algorithm}
+	\begin{algorithmic}[1]
+		\RECEIVE{$The minimum safe amount of this resource$}
+		\RECEIVE{$The cost of this item$}
+		\RECEIVE{$The current amount of this resource$}
+		\IF{$The current amount of the resources \lessthan}
+	\end{algorithmic}
+\end{algorithm}
 
 \subsubsection{Data flow diagram}
 
