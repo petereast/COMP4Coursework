@@ -74,7 +74,8 @@ And for the resources stock management:
 		\RECEIVE{$The minimum safe amount of this resource$}
 		\RECEIVE{$The cost of this item$}
 		\RECEIVE{$The current amount of this resource$}
-		\IF{$The current amount of the resources \lessthan}
+		\IF{$The current amount of the resources \textless minumum required amount of this resource$}
+			\SEND{$Buy more of this resource$}
 	\end{algorithmic}
 \end{algorithm}
 
