@@ -3,7 +3,10 @@
 \section{Overall System Design}
 
 \subsection{Short description of the main parts of the system}
-
+	The system contains three main elements: The subsystem for managing meetings, the subsystem for managing referral tickets and the subsystem for managing resources and accounting. The meeting management subsystem will contain a record of all the meetings for each member of the staff team, therefore as part of the global system, there will be a representation of the staff team and anyone who might be involved in any meetings. This subsystem will also be responsible for the reminding the users of their meetings and informing users when they've been invited to a meeting.
+	The next subsystem is the system for managing support and referral tickets, this will automatically pass the ticket on to whoever is on the rota to deal with that ticket at the given time. The tickets will be listed in order of priority, which is set when they're submitted, the priority will increase with time to ensure that nothing is ignored for too long as often the issues that would be reported are very time sensitive. The tickets will be kept securely in an encrypted section of the database, and each individual ticket will only be accessible by people for whom it is relevant to ensure confidentiality and compliance with various laws concerning such information.
+	The third subsystem, designed for managing the material resources within the Church will consist of a record of all of the finite resources that the Church regularly purchases and sells, the subsystem will also keep track of the money throughput. 
+	Because many of the people who would operate this system will not be trained nor contractually obliged to give a satisfactory quality of service, the security and access rights components of the system are of paramount importance, not only to prevent breaches in confidentiality but also to ensure that nobody is confused when the interface is more complicated than necessary therefore the system needs to determine which parts of the system are relevant to a particular person and only show them those parts.
 \subsection{System flowcharts showing an overview of the complete system}
 
 \section{User Interface Designs}
