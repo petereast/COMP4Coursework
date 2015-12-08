@@ -238,13 +238,33 @@ Resource(\underline{ResourceID}, ResourceName, ResourceCost, ResourceQuantity, R
 
 \subsection{Hardware}
 
+	The Church currently uses a variety of aging PCs and Apple Macs, therfore the software cannot use any OS dependant resources.
+	\\The proposed system does not require any high performance computing systems, nor does it require a large amount of storage.
+	\\The lowest spec PC running on the system is:
+	\begin{itemize}
+		\item Intel Pentium, 2.13GHz (mid 2009)
+		\item 2 GiB ram
+		\item 100Mbit NIC
+		\item 17" 4:3 Monitor
+		\item 250Gb HDD
+	\end{itemize}
+	These specs are more than enough for handling all of the processing and GUI elements of the program, the user may experince slight delays during database queries, especially if the database becomes large (after one or two years, without the automatic clearing process), but these shouldn't last more than a few seconds. This necessitates processes to automatically manage expired data.
+
+
+	The system UI will need to be able to scale for smaller screen sizes to ensure all of the required controls and information are on screen at one time.
+
+
 \subsection{Software}
+	Because the computers which will run this system are running both OS X and Windows, the system cannot depend on OS specific resources or quirks, and the system must be self contanied. The people operating the system might have little or no training or experice with using computers, which means the system must contain comprehensive and simple documentation both on paper and included in the system.
 
 \subsection{Time}
+	The only time constraint for this project is (unless changed) January 2016, this is set by the College. Because the proposed system will replace an existing system, there is less time pressure from the client as they are able to continue operating, albeit at a reduced rate, without the proposed system.
 
 \subsection{User Knowledge}
+	The proposed system will be used by several people, all with different ages and with different amounts of experience in ICT systems so it is necessary to assume no knowledge when designing the UI and the documentation.
 
 \subsection{Access restrictions}
+	The information processed by this system is often confidential, so the proposed system includes encryption and user access control, with authentication by password. The system adminstrator is able to change the access privelliges of each of the users
 
 \section{Limitations}
 
