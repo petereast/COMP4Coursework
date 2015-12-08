@@ -126,9 +126,16 @@ Meeting Notification Process & NewMeetingID & Integer (ID) & 4 Bytes & Database 
 	% \\
 	% The entire system has to be able to account for large-scale events, for example the Church acquiring another building, if the Church branches out into Church plants or if the Church joins a union of Churches, therfore within the system there should be a way of managing more than one separate church.
 
-	There are 5 members of the staff team which will have between 2 and 5 meetings per day
+	There are 5 members of the staff team which will have between 2 and 5 meetings per day, which means in one month, the system will have up to 750 meetings, eacho of which will require up to 1815 Bytes, which will total at 1.3MiB per month for the meetings system. However, the number of people who will be involved in meetings will be subject to change on a weekly basis, it could easily double, triple or more which means that this part of the database could use up to 5MiB per month and up to 60MiB per year.
 
-	% TODO: This requires the data dictionary
+	The user's table will contain a record of each user who has meetings, which totals at 798 Bytes per person. In a large city centre Church, there are approximately 250 congregates, of which 50 will be involved with meetings, which means the user's database will require at minumum, 39KiB. However this number is subject to change and could easily double in the space of a year, but because of the data protection act, some means of ensuring the data does not expire would mean that as, or shortly after new users are added, the old users are removed so the size of the table will only fluctuate by \pm10KiB, so to ensure there's alway enough space, this table will be allocated 60KiB.
+
+	The tasks table, which is effectively a record of each user's todo list, will contain records for between 5 and 10 users each with up to and estimated 15 items per day. Each item is 5170 Bytes, which means every day, each user will generate up to 76Kib, with up to 10 users totalling at 760Kib, so in a month the database will contain up to 22.8Mib. However, the nature of the tasks means that they will expire after a certain amount of time, which will limit the size of the database. If the expiry period of each task is set to one year, this table will not exceed 273.6Mib
+
+	The resources table will contain a record of all of the things the Church regularly buys, including cleaning supplies, food, drinks, cafe supplies. The church has several areas which require resources, some of which require more than others. If in total, the Church buys 300 consumeable products, each record will require 271 Bytes, with 300 items, the table will require 80KiB, however there is potential for new items to be added on a regular basis, so this table could easily grow to 100KiB.
+
+	The total database requirements are 334MiB, for a year's worth of data. The program itself, the PyQt Library and Python will require about 130Mib, which means the total estimated size of the system will be 464MiB.
+
 
 \section{Objectives}
 
