@@ -193,7 +193,15 @@ Meeting Notification Process & NewMeetingID & Integer (ID) & 4 Bytes & Database 
 
 \subsection{Entity Descriptions}
 
-%TODO: when draw.io is working again, do this
+User(\underline{UserID}, UserFirstname, UserLastname, UserPasswordHash, Permissions)
+
+Meeting(\underline{MeetingID}, MeetingOwner, MeetingTitle, MeetingDateTime, MeetingPlace, MeetingAttendees)
+
+UserMeeting(\underline{UserID}, \underline{MeetingID}, UserMeetingConfirmation)
+
+Task(\underline{TaskID}, TaskTitle, TaskDescription, TaskOwner, TaskAttendees, TaskExpiry, Priority)
+
+Resource(\underline{ResourceID}, ResourceName, ResourceCost, ResourceQuantity, ResourceRequiredQuantity)
 
 \subsection{Data dictionary}
 
@@ -203,9 +211,26 @@ Meeting Notification Process & NewMeetingID & Integer (ID) & 4 Bytes & Database 
 
 \subsection{Object Listing}
 
+\begin{itemize}
+	\item User
+	\item Attendee
+	\item Meeting
+	\item Task
+	\item Resource
+	\item Event
+\end{itemize}
+
 \subsection{Relationship diagrams}
 
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{./Analysis/diagrams/orld.jpg}
+\end{figure}
+
 \subsection{Class definitions}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{./Analysis/diagrams/ods.jpg}
+\end{figure}
 
 \section{Other Abstractions and Graphs}
 
