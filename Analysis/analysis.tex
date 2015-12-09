@@ -97,7 +97,7 @@ For the subsystem managing the staff team's tasks, these are usually a handwritt
 	\includegraphics[width=\textwidth]{./Analysis/diagrams/todo.jpg}
 \end{figure}
 
-The current system for managing resources uses input from recipts taken from the
+The current system for managing resources uses input from recipts taken from the till in the cafe and from handwritten notes from other departments within the Church detailing expendature and requesting resources. The output from this system is in the form of a handwritten ledgar maintained by the Church administrator.
 
 \subsection{The proposed system}
 
@@ -136,6 +136,12 @@ Meeting Notification Process & NewMeetingID & Integer (ID) & 4 Bytes & Database 
 \end{table}
 
 \subsubsection{Data flow diagram}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{./Analysis/diagrams/dfp1.jpg}
+	\includegraphics[width=\textwidth]{./Analysis/diagrams/dfp2.jpg}
+
+\end{figure}
 
 \subsubsection{Volumetrics}
 	% The church has between 150 and 250 congregates meeting every week, of these congregates there are about 50 \'members\'. In the Baptist Church, a member is defined as someone who attends regularly enough and is commited to both Christianity and the Church who is able to make proposals and cast votes in the monthly Church administration meeting. This means that the scale of the databases required for staff management will not be huge. However, for the meetings management elements of the system, there is not a limit to the number of meetings and appointments that will be organised therfore this part of the system must be scaleable infinitely, or to the capacity of the current hardware. The support and referral ticket system also must be able to scale to the needs of the congregation, it also needs to have an archive of past events.
