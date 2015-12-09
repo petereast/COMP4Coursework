@@ -291,11 +291,38 @@ Resource(\underline{ResourceID}, ResourceName, ResourceCost, ResourceQuantity, R
 \section{Limitations}
 
 \subsection{Areas which will not be included in computerisation}
+		%TODO: Do this bit!!!
 
 \subsection{Areas considered for future computerisation}
+	An extension to the system could be developed to replace the checkout element of the cafe which would automatically update resources and it would be able to keep financial records and report them to the cafe management on a regular basis, this would completely cut out the time required to input the updates to the sales information at the end of the day, and it would give the management live insights into the operation of the cafe.
 
 \section{Solutions}
 
 \subsection{Alternative solutions}
 
+\begin{table}[]
+\centering
+\caption{My caption}
+\label{my-label}
+\begin{tabular}{|l|l|l|}
+\hline
+Solution                       & Advantage                                                                                                                                                                                                                                                                     & Disadvantages                                                                                                                                                                                                                                              \\ \hline
+Custom set of spreadsheets     & Does not require bespoke software                                                                                                                                                                                                                                             & does not store data securely, does not organise data, difficult to share information between people. No support for notifications                                                                                                                          \\ \hline
+\"Webapp\"                       & Cloud resource, accessible anywhere from any device, offsite backups \& server resources. Support can be issued remotely                                                                                                                                                      & Has a regular service charge, a web based application is open to everyone in the world therefore the application must be secure.                                                                                                                           \\ \hline
+Revising the current system    & Very low cost, no external contractors required, no need to retrain and/or learn new skills.                                                                                                                                                                                  & All of the current problems will still exist, management of data becomes a manual and laborious task.                                                                                                                                                      \\ \hline
+Command Line application (CLA) & Quicker and easier to program, most storage and processing efficient solution                                                                                                                                                                                                 & Requires significant training and documentation. Most of the users working for the client have little or no computer experience therefore a command line application would be completely foreign to them and would probably scare them away from using it. \\ \hline
+Desktop application with GUI   & Can be written in Python so all of the core code will be the same as in a CLA, except it will have a GUI to operate those functions. Layout can be easy to use and can include easy to reach help at every point of entry. Could be used with a touch screen for ease of use. & GUIs are more time consuming to program than CLAs as the layout of the UI requires significant design process. Also rendering and operating GUI requires more processing than a CLA.                                                                       \\ \hline
+\end{tabular}
+\end{table}
+
 \subsection{Justification of chosen solution}
+
+I have chosen to use a Python Desktopp GUI app for the following reasons:
+\begin{itemize}
+	\item The application will meet my client's specific needs in a user friendly way that cannot accidentally be changed, unlike a spreadsheet
+	\item The digital storage of the user's data will fit on existing hardware.
+	\item All the data contained in the database can be easily backed up and restored.
+	\item The GUI has all of the advanced features of the CLA but they are more easily accessable.
+	\item The python language has a balance programming simplicity and computing versitility that make it perfect applications such as these, when there's a relatively small time frame but the task requires some advanced features.
+
+\end{itemize}
