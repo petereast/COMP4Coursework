@@ -35,8 +35,10 @@
 \subsection{Class Definitions}
 
 % TODO: Define the software objects based on the ER diagrams.
+
+%TODO: Actuall redo my entity relationship diagram
 	\begin{figure}[H]
-		\inlcudegraphics[width=\textwidth]{./Design/diagrams/ods.jpg}
+		\inlcudegraphics[width=\textwidth]{./Design/diagrams/era.jpg}
 	\end{figure}
 
 \section{Prototyping}
@@ -90,14 +92,27 @@
 \subsubsection{ER Diagrams}
 	\begin{figure}[H]
 		\inlcudegraphics[width=\textwidth]{./Design/diagrams/orld.jpg}
-
+		%TODO: this needs to be redone
 	\end{figure}
 
 \subsubsection{Entity Descriptions}
+User(\underline{UserID}, UserFirstname, UserLastname, UserPasswordHash, Permissions)
+
+Meeting(\underline{MeetingID}, MeetingOwner, MeetingTitle, MeetingDateTime, MeetingPlace, MeetingAttendees)
+
+UserMeeting(\underline{UserID}, \underline{MeetingID}, UserMeetingConfirmation)
+
+Task(\underline{TaskID}, TaskTitle, TaskDescription, TaskOwner, TaskAttendees, TaskExpiry, Priority)
+
+Resource(\underline{ResourceID}, ResourceName, ResourceCost, ResourceQuantity, ResourceRequiredQuantity)
 
 \subsubsection{1NF to 3NF}
 
+	%TODO: make up some non normalised stuff then show the Normalisation process.
+
 \subsection{SQL Queries}
+	%TODO: mention output
+
 
 \section{Security and Integrity of the System and Data}
 
