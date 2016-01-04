@@ -15,7 +15,7 @@
 
 \section{Hardware Specification}
 	The client software will have the same requirements as the python standard for 3.4 which are:
-	- 135MiB of Disk space
+	- 2.5Gib of Disk space
 
 
 \section{Program Structure}
@@ -117,10 +117,22 @@ Resource(\underline{ResourceID}, ResourceName, ResourceCost, ResourceQuantity, R
 \section{Security and Integrity of the System and Data}
 
 \subsection{Security and Integrity of Data}
+	The sensitive data, as defined under the data protectoin act (personal data such as dates of birth, addresses, contact details; and
+	trusted information, such as referral notes or prayer requests) will be encrypted using a two-way encryption algorithm, such as the
+	AES algorithm.
+	The user's passwords that they use to access this sensitive data will be encrypted using a one-way hashing algorithm, such as the SHA1
+	algorithm, so that if the database is accessed using a 3rd party application, the attacker will not be able to read the passwords and
+	access the rest of the information using them.
+
 
 \subsection{System Security}
+	The system is protected by a combination of username-password authentication and a user privelleges system, where the administrator can
+	change which subsystems each user has access to. Because the system uses a local database file, there is no builtin authentication for
+	the data, if the system were to make use of a cloud system, such as Microsoft Azure, this problem would be avoided because of password
+	protected  access to the database.
 
 \section{Validation}
+	%TODO: how tf do i do this?
 
 \section{Testing}
 

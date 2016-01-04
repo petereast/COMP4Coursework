@@ -1,15 +1,15 @@
-#Design
+# Design
 There are **12 marks** available for this section.
 
-##Introduction
+##  Introduction
 During the Analysis section you gained an understanding of what is going to be involved in solving the problems presented by the project and from this you developed a list of objectives.
 
 The Design phase deals with translating these objectives into a **physical model** of the system.
 
-##Overall System Design
+##  Overall System Design
 This section focuses on enabling the reader to understand the system. You need to write a clear and concise description that visualises each system function.
 
-###Short description of the main parts of the system
+## #  Short description of the main parts of the system
 In this section it is important to think about the different areas of your system and then describe each of those areas in reasonable detail. The reader should be able to understand all of the functionality of your system from this description.
 
 It should summarise each aspect of the system's functionality and this section may be anything up to **roughly a page** in length.
@@ -30,7 +30,7 @@ You might then take each of these areas as a **sub-heading** and describe the fu
     - Finally, additional details such as dietary requirements will be asked for and then there will be an opportunity to review the booking details before it is confirmed
     - Once confirmed, the customer can be provided with the booking reference number which can be used to amend or cancel the booking in futur
 
-###System flowcharts showing an overview of the complete system
+## # System flowcharts showing an overview of the complete system
 A system flowchart allows you to represent the functionality of the system in a way that is easily understood. You will need to create a chart which represents all of the functionality of your system. The symbols that you should use in your flowchart are:
 
 ![][1]
@@ -51,7 +51,7 @@ Notice, that instead of continuing the flowchart we have just referenced the pag
 
 This enables you to both complete the rest of the diagram on a new page and also see where the rest of the diagram can be located.
 
-####Creating Flow charts
+## # #Creating Flow charts
 System flowcharts are difficult to do well using the tools available in Word. You will need to use a [**specialist diagramming**][11] application to do this section justice.
 
 You should also consider:
@@ -63,7 +63,7 @@ The example flowchart in the A2 textbook is not very good as it does not use all
 
 Keep in mind that a process symbol is for processing and not for stating that a particular UI screen is displayed on the monitor.
 
-##User Interface Designs
+## User Interface Designs
 Here you are providing diagrams which **visualise** the interface and show the **flow of control** i.e. what happens when one interface component is selected.
 
 Designing a good interface is difficult, even for professional software developers. The success of an interface depends on many factors which need to be considered together. There is a good list of these factors in the **A2 Textbook on page 250**.
@@ -74,15 +74,15 @@ It is important to consider each one of these factors seriously as by doing so y
 
 ![][6]
 
-###Designing your Interface
+## # Designing your Interface
 You must create sketches for each interface screen and **annotate** these sketches to **explain your decisions** and also to show **flow of control**. The example below shows this.
 
 ![][7]
 
-###Considerations
+## # Considerations
 Be sure to provided **headings** and **figure numbers** for each interface so that the can be **cross-referenced** later. In addition, be sure to annotate the designs to explain or highlight particular features.
 
-##Hardware Specification
+## Hardware Specification
 This is your opportunity to describe and justify the hardware that is required to enable your design. In the majority of cases the will be the hardware specified by your client as this is the equipment they plan to use to run your solution. However, if a few cases it may be appropriate to select hardware that will need to be purchased by the client to effectively run your system.
 
 You need to **justify** your choices in terms of:
@@ -93,10 +93,10 @@ You need to **justify** your choices in terms of:
 
 You should take each hardware component and justify it individually.
 
-##Program Structure
+## Program Structure
 In this section you are breaking the problem down so that it can be more easily solved and then developing the algorithms and structures necessary to solve these problems.
 
-###Topdown design structure charts
+## # Topdown design structure charts
 Here you must take your problem and break it down into its component parts. You start be developing a **Hierarchy Chart** for the problem. For example:
 
 ![][8]
@@ -105,7 +105,7 @@ Once you have created the hierarchy chart you need to add interfaces and control
 
 ![][9]
 
-###Algorithms in pseudo-code for each data transformation process
+## # Algorithms in pseudo-code for each data transformation process
 Most students find this the hardest section to complete as it is quite hard to think about all of the algorithms that your system will require **before** you build the system rather than creating them as you are going along. You should make use of the [pseudo-code guide][10] which explains the syntax of pseudo-code.
 
 Here, we are only interested in those algorithms that perform some **data transformation**, not on every single algorithm in the system. You will be able to identify the data transformation algorithms from analysing your structure chart and identifying those sub-problems that **process** data.
@@ -148,20 +148,20 @@ ENDFUNCTION
 
 Make sure you provide algorithms for **all** data processing functions in your system. However, there is no need to include **SQL** in your algorithms - just state that you will get the information from the database. SQL queries are highlighted in a separate section.
 
-##Object diagrams
+## Object diagrams
 You have done most of this work already as part of the analysis section. For the most part you should be able to copy and paste the material from there into this section. However, you may need to make alterations if your understanding of the problem has improved.
 
-##Class definitions
+## Class definitions
 You have done most of this work already as part of the analysis section. For the most part you should be able to copy and paste the material from there into this section. However, you may need to make alterations if your understanding of the problem has improved.
 
-##Prototyping
+## Prototyping
 You might find this section difficult as you have little experience of developing large scale solutions to programming problems.
 
 At this stage, there are many areas of your project implementation that you must be unsure about as you may not have the gained the knowledge necessary to have confidence in developing a particular area.
 
 Prototypes can help. Rather than attempting to jump straight into a difficult problem you may decide to solve a smaller scale problem to test out your ideas or to develop your programming knowledge. You can then use the results to inform your decisions on tackling the actual problem.
 
-###Consideration of impact on design and development
+## # Consideration of impact on design and development
 In this section you should list the different parts of the implementation you plan to create prototypes for and give reasons as to why you wish to do this. You should explain what you are expecting the prototype to help you find out and also how the results of the prototype will inform the development of the actual system.
 
 For example, you may wish to:
@@ -169,38 +169,38 @@ For example, you may wish to:
 - Prototype the design of a user interface form and get feedback from the client on whether it is appropriate or not.
 - Develop an algorithm which enables you to place parameters in a complex SQL query as you are not sure about how to do this
 
-##Definition of Data Requirements
+## Definition of Data Requirements
 This section is going to be based on your work on the **data source(s) and data destination(s)** section of the Analysis.
 
-###Identification of all data input items
+## # Identification of all data input items
 You should list all of you data input items here. If not obvious you could say where these items come from and give a comment/description for more obscurely titled items.
 
-###Identification of all data output items
+## # Identification of all data output items
 You should list all of you data output items here. If not obvious you could say where these items come from and give a comment/description for more obscurely titled items.
 
-###Explanation of how data output items are generated
+## # Explanation of how data output items are generated
 You should explain how data output items are produced and which input items are required to produce them.
 
 It may make sense to complete this entire section in table format.
 
-###Data Dictionary
+## # Data Dictionary
 This is your data dictionary from Analysis updated with any additional data items that have presented themselves at the design phase.
 
-###Identification of appropriate storage media
+## # Identification of appropriate storage media
 Describe and explain the kind of secondary storage devices that will be required to store and back-up your data. Be sure to justify your choices.
 
-##Database Design
+## Database Design
 It is important to spend a good deal of time on this section as without a properly designed database your system will not function as intended.
 
-###Normalisation
+## # Normalisation
 
-####ER Diagrams
+## # #ER Diagrams
 Include, with a key, your final normalised ER diagram.
 
-####UNF to 3NF (and Entity Descriptions)
+## # #UNF to 3NF (and Entity Descriptions)
 In this section show with annotation how you moved from **UNF** to **3NF**. Ensure that your final **entity descriptions match the ER diagram** in the section above.
 
-###SQL Queries
+## # SQL Queries
 You will have literally dozens of SQL queries to produce for your implementation. In this section only include those queries that are either **complex** or **complex and parameterised**.
 
 For example, the following type of SQL query is **simple** and **should not** be included:
@@ -229,33 +229,33 @@ Video.VideoID = Genre.VideoID
 
 Clearly you will need to annotate and explain where the parameters come from and make clear that you are using Python to format the SQL query text strings.
 
-##Security and Integrity of the System and Data
+## Security and Integrity of the System and Data
 This section is concerned with explaining how you plan to ensure your system and data are used only by authorised individuals.
 
-###Security and Integrity of Data
+## # Security and Integrity of Data
 Here you will want to discuss any encryption you plan to add to certain data or how you are going to ensure that the data is accurate (may refer to the next section on Validation).
 
 Finally, you will want to discuss how your data needs to be protected in respect to legislation. You may find it possible to copy material from Analysis and amend/improve it based on the changes that have occurred during the design phase.
 
-###System Security
+## # System Security
 This section deals with the access restrictions you will place on the system and how these relate to legislation.
 
-##Validation
+## Validation
 This section will involve references back to the data dictionary where you identified validation techniques to use. Here you will identify each type of check and explain why it is required.
 
-##Testing</h2>
+## Testing</h2>
 Testing is another important section as producing the plan you will use to actually test your system as you are developing it/once you have finished developing it.
 
-###Outline Plan
+## # Outline Plan
 
-####Identification and explanation of suitable test strategies</h4>
+## # #Identification and explanation of suitable test strategies</h4>
 This section should be a table which identifies the purpose of each area of testing, the testing strategy and a rationale for using the strategy:
 
 |Test Series|Purpose of test series|Testing Strategy|Strategy Rationale|
 |-|-|-|-|
 |1|Validation of input data performed corrected|Bottom-up Testing|Each component will be tested as it becomes available|
 
-###Detailed Plan
+## # Detailed Plan
 In this final section you must take the outline plan and identify the tests that will be performed in each area. There is a good example in the textbook on **page 262**.
 
 However, you should use the table format below:
@@ -303,7 +303,7 @@ However, you should use the table format below:
 </tr>
 </table>
 
-##Mark Scheme
+## Mark Scheme
 
 0-3 marks|4-6 marks|7-9 marks|10-12 marks
 ---------|---------|---------|-----------

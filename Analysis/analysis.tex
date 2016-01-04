@@ -5,7 +5,7 @@
 	assets and events within the church. There is also no official way to report incidents both pastoral and material.
 
 \subsection{Client Identification}
-	My client is a mid-sized city centre church with 250 regular attendees and around 60 people who are involved in rotas and with responsibilities. 
+	My client is a mid-sized city centre church with 250 regular attendees and around 60 people who are involved in rotas and with responsibilities.
 	There are several components to the Church's operation broadly split into two sections: People and resources. People represents all of the meetings, appointments and responsibilities, it also includes records of these meetings and appointments; and resources represents the materials that are required for the smooth operation of the Church, for example Teabags and Support Tickets. The Church also needs to regularly send out emails to inform it's members of their responsibilities and to keep them up to date with church news.
 
 	They use a mixture of Apple iMac and Windows machines, so it's essential that any software they use is cross-compatible and doesn't use any OS spec
@@ -14,14 +14,17 @@
 	The Church relies heavily on being properly organised, which places a large amount of responsibility and pressure on the office administrator and
 	staff team. Many of these tasks can be automated, however there are no automatic systems in place. Also because the Church leadership is elected and the people holding the various roles change regularly, ofteh confusion emerges during transition periods.
 
+%TODO: identify the individuals within the organisation more clearly - job roles??
+%TODO: Elaborate on the staff team and job roles.
+
 \subsection{Define the current system}
 	The current system is a mixture of word of mouth and emails containing scraps of information. It consists of three main elements: the meetings, duties
 	and appointments part of the system, the support tickets and referrals system and the stock management system (this includes cafe resources, office
-	stationary and anything that has to be purcheased regularly or has a supply which can be depleted). Currently, people are expected to keep 
+	stationary and anything that has to be purcheased regularly or has a supply which can be depleted). Currently, people are expected to keep
 	and duties in whatever diary system they have and they do this with a reasonable degree of success. For the cafe stock management, whoever
 	is operating the till keeps a handwritten record of whatever has been sold, which is then added to a central ledger at the end of the day.
 	For all of the incident reporting (support tickets, prayer requests etc) emails are used as the primary way of official communication, often
-	the same set of people are copied into whatever email conversations that take place. For membership inormation, handwritten record cards 
+	the same set of people are copied into whatever email conversations that take place. For membership inormation, handwritten record cards
 	containing all of the information for each member are stored and archived in two locations.
 
 \subsection{Describe the problems}
@@ -32,18 +35,18 @@
 %	potential for omissions, limitations in terms of scalability
 	The system for dealing with stock management in the cafe adds potential for omissions, the often elderly people responsible for this aspect
 	often forget to write things down and sometimes find it quite difficult to use the old and complex till system. Also all of the orders have
-	to be cross-referenced with a daily price list and any offers or deals are factored in, this adds further potential for error and could mean 
+	to be cross-referenced with a daily price list and any offers or deals are factored in, this adds further potential for error and could mean
 	that the cafe will loose money. The lack of comprehensive records means that the cafe will have trouble accurately guaging trends in the
 	customers and fail to adapt to these trends.
 %	no centralised, secure or official record.
-	Because a lot of the pastoral information that has to be communicated to people in various positions around the church is strictly 
-	confidential, email is not a bad choice, however it does not provide a centralised set of records which would be required to ensure 
-	professional and caring conduct. So the current system fails to ensure that if any official communication is called into question 
+	Because a lot of the pastoral information that has to be communicated to people in various positions around the church is strictly
+	confidential, email is not a bad choice, however it does not provide a centralised set of records which would be required to ensure
+	professional and caring conduct. So the current system fails to ensure that if any official communication is called into question
 	that there is an official, untampered record of it.
 %	no synchronisation/potential for omissions, data protection act states that only appropriate and up to date information is stored - these record cards do not meet these standards.
-	The data protection act states that information about anyome must not be kept any longer than necessary, and it must be kept up 
-	to date, some of these record cards date back to the 1920s and contain information about people who no longer attend the church 
-	and people who are deceased, there is no easy way to update these record cards and there are no failsafes the ensure their validity 
+	The data protection act states that information about anyome must not be kept any longer than necessary, and it must be kept up
+	to date, some of these record cards date back to the 1920s and contain information about people who no longer attend the church
+	and people who are deceased, there is no easy way to update these record cards and there are no failsafes the ensure their validity
 	and their complience with the DPA.
 
 \subsection{Section appendix}
@@ -122,7 +125,7 @@ For the subsystem managing the staff team's tasks, these are usually a handwritt
 	\includegraphics[width=\textwidth]{./Analysis/diagrams/todo.jpg}
 \end{figure}
 
-The current system for managing resources uses input from recipts taken from the till in the cafe and from handwritten notes from 
+The current system for managing resources uses input from recipts taken from the till in the cafe and from handwritten notes from
 other departments within the Church detailing expendature and requesting resources. The output from this system is in the form of a handwritten ledgar maintained by the Church administrator.
 
 \subsection{The proposed system}
@@ -170,42 +173,42 @@ Meeting Notification Process & NewMeetingID & Integer (ID) & 4 Bytes & Database 
 \end{figure}
 
 \subsubsection{Volumetrics}
-	% The church has between 150 and 250 congregates meeting every week, of these congregates there are about 50 \'members\'. In the Baptist 
+	% The church has between 150 and 250 congregates meeting every week, of these congregates there are about 50 \'members\'. In the Baptist
 	%Church, a member is defined as someone who attends regularly enough and is commited to both Christianity and the Church who is able to
 	make proposals and cast votes in the monthly Church administration meeting. This means that the scale of the databases required for staff
-	management will not be huge. However, for the meetings management elements of the system, there is not a limit to the number of meetings 
-	and appointments that will be organised therfore this part of the system must be scaleable infinitely, or to the capacity of the current 
-	hardware. The support and referral ticket system also must be able to scale to the needs of the congregation, it also needs to have an 
+	management will not be huge. However, for the meetings management elements of the system, there is not a limit to the number of meetings
+	and appointments that will be organised therfore this part of the system must be scaleable infinitely, or to the capacity of the current
+	hardware. The support and referral ticket system also must be able to scale to the needs of the congregation, it also needs to have an
 	archive of past events.
 	% \\
-	% The entire system has to be able to account for large-scale events, for example the Church acquiring another building, if the 
+	% The entire system has to be able to account for large-scale events, for example the Church acquiring another building, if the
 	branches out into Church plants or if the Church joins a union of Churches, therfore within the system there should be a way o
 	f managing more than one separate church.
 
 	There are 5 members of the staff team which will have between 2 and 5 meetings per day, which means in one month, the system will
-	have up to 750 meetings, eacho of which will require up to 1815 Bytes, which will total at 1.3MiB per month for the meetings system. 
+	have up to 750 meetings, eacho of which will require up to 1815 Bytes, which will total at 1.3MiB per month for the meetings system.
 	However, the number of people who will be involved in meetings will be subject to change on a weekly basis, it could easily double,
 	triple or more which means that this part of the database could use up to 5MiB per month and up to 60MiB per year.
 
 	The user's table will contain a record of each user who has meetings, which totals at 798 Bytes per person. In a large city
-	centre Church, there are approximately 250 congregates, of which 50 will be involved with meetings, which means the user's 
+	centre Church, there are approximately 250 congregates, of which 50 will be involved with meetings, which means the user's
 	database will require at minumum, 39KiB. However this number is subject to change and could easily double in the space of a year,
 	but because of the data protection act, some means of ensuring the data does not expire would mean that as, or shortly after new users
 	are added, the old users are removed so the size of the table will only fluctuate by $\pm$10KiB, so to ensure there's alway enough space,
 	this table will be allocated 60KiB.
 
 	The tasks table, which is effectively a record of each user's todo list, will contain records for between 5 and 10 users each with up
-	to and estimated 15 items per day. Each item is 5170 Bytes, which means every day, each user will generate up to 76Kib, with up to 10 
+	to and estimated 15 items per day. Each item is 5170 Bytes, which means every day, each user will generate up to 76Kib, with up to 10
 	users totalling at 760Kib, so in a month the database will contain up to 22.8Mib. However, the nature of the tasks means that they will
 	expire after a certain amount of time, which will limit the size of the database. If the expiry period of each task is set to one year,
 	this table will not exceed 273.6Mib
 
-	The resources table will contain a record of all of the things the Church regularly buys, including cleaning supplies, food, drinks, 
+	The resources table will contain a record of all of the things the Church regularly buys, including cleaning supplies, food, drinks,
 	cafe supplies. The church has several areas which require resources, some of which require more than others. If in total, the Church
 	buys 300 consumeable products, each record will require 271 Bytes, with 300 items, the table will require 80KiB, however there is potential
 	for new items to be added on a regular basis, so this table could easily grow to 100KiB.
 
-	The total database requirements are 334MiB, for a year's worth of data. The program itself, the PyQt Library and Python will 
+	The total database requirements are 334MiB, for a year's worth of data. The program itself, the PyQt Library and Python will
 	require about 130Mib, which means the total estimated size of the system will be 464MiB.
 
 
@@ -216,7 +219,7 @@ Meeting Notification Process & NewMeetingID & Integer (ID) & 4 Bytes & Database 
 	various aspects and functions within the Church. The entirity of the system needs to be useable by anyone who could potentially be included
 	in a rota, however the system should not require a great deal of training and should be self explainitory if possible.
 	%Gonna need more detail here
-	
+
 
 \subsection{Specific Objectives}
 	%do a lovely itemize thing
@@ -345,7 +348,7 @@ Resource(\underline{ResourceID}, ResourceName, ResourceCost, ResourceQuantity, R
 	to assume no knowledge when designing the UI and the documentation.
 
 \subsection{Access restrictions}
-	The information processed by this system is often confidential, so the proposed system includes encryption and user access control, with 
+	The information processed by this system is often confidential, so the proposed system includes encryption and user access control, with
 	authentication by password. The system adminstrator is able to change the access privelliges of each of the users
 
 \section{Limitations}
@@ -355,8 +358,8 @@ Resource(\underline{ResourceID}, ResourceName, ResourceCost, ResourceQuantity, R
 
 \subsection{Areas considered for future computerisation}
 	An extension to the system could be developed to replace the checkout element of the cafe which would automatically update resources and
-	it would be able to keep financial records and report them to the cafe management on a regular basis, this would completely cut out the time 
-	required to input the updates to the sales information at the end of the day, and it would give the management live insights into 
+	it would be able to keep financial records and report them to the cafe management on a regular basis, this would completely cut out the time
+	required to input the updates to the sales information at the end of the day, and it would give the management live insights into
 	the operation of the cafe.
 
 \section{Solutions}
