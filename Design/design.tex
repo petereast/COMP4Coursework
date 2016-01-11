@@ -31,6 +31,9 @@
 \subsection{Object Diagrams}
 
 % TODO: Remember to complete this in the analysis section
+    \begin{figure}[H]
+        \inclucegraphics[width=\textwidth]{./Design/diagrams/ods.jpg}
+    \end{figure}
 
 \subsection{Class Definitions}
 
@@ -96,13 +99,15 @@
 	\end{figure}
 
 \subsubsection{Entity Descriptions}
-User(\underline{UserID}, UserFirstname, UserLastname, UserPasswordHash, Permissions)
+User(\underline{UserID}, Username, UserFirstname, UserLastname, UserPasswordHash, Permissions)
 
-Meeting(\underline{MeetingID}, MeetingOwner, MeetingTitle, MeetingDateTime, MeetingPlace, MeetingAttendees)
+Meeting(\underline{MeetingID}, MeetingOwner, MeetingTitle, MeetingDateTime, MeetingPlace)
 
-UserMeeting(\underline{UserID}, \underline{MeetingID}, UserMeetingConfirmation)
+MeetingAttendee(\underline{UserID}, \underline{MeetingID}, UserMeetingConfirmation)
 
 Task(\underline{TaskID}, TaskTitle, TaskDescription, TaskOwner, TaskAttendees, TaskExpiry, Priority)
+
+TaskAttendee(\underline{TaskID}, \underline{UserID}, Confirmed)
 
 Resource(\underline{ResourceID}, ResourceName, ResourceCost, ResourceQuantity, ResourceRequiredQuantity)
 
@@ -112,6 +117,52 @@ Resource(\underline{ResourceID}, ResourceName, ResourceCost, ResourceQuantity, R
 
 \subsection{SQL Queries}
 	%TODO: mention output
+
+    Database Schema:
+\begin{sql}
+    BEGIN TRANSACTION;
+CREATE TABLE Users
+                (UserID INTEGER PRIMARY KEY AUTOINCREMENT,
+                Name TEXT,
+                Username TEXT,
+                Password TEXT,
+                Permissions INTEGER
+                );
+CREATE TABLE Tasks
+                (TaskID INTEGER PRIMARY KEY AUTOINCREMENT,
+                Title TEXT,
+                Description TEXT,
+                Owner INTEGER,
+                Attendees INTEGER
+                );
+CREATE TABLE TaskAttendee
+                (
+                TaskId INTEGER,
+                UserId INTEGER
+                );
+CREATE TABLE `Resources` (
+	`ResourceID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`ResourceName`	TEXT,
+	`ResourceCost`	INTEGER,
+	`ResourceQuantity`	INTEGER,
+	`ResourceRequiredQuantity`	INTEGER
+);
+CREATE TABLE Meetings
+                (MeetingID INTEGER PRIMARY KEY AUTOINCREMENT,
+                OwnerID INTEGER,
+                Title TEXT,
+                ISOTime TEXT,
+                Location TEXT,
+                Attendees INTEGER
+                );
+CREATE TABLE MeetingAttendee
+(
+    MeetingID INTEGER,
+    UserID INTEGER,
+    Confirmed BOOLEAN
+);
+COMMIT;
+\end{sql}
 
 
 \section{Security and Integrity of the System and Data}
