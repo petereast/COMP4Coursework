@@ -111,7 +111,7 @@ TaskAttendee(\underline{TaskID}, \underline{UserID}, Confirmed)
 
 Resource(\underline{ResourceID}, ResourceName, ResourceCost, ResourceQuantity, ResourceRequiredQuantity)
 
-\subsubsection{1NF to 3NF}
+\subsubsection{/1NF to 3NF}
 
 	%TODO: make up some non normalised stuff then show the Normalisation process.
 
@@ -162,6 +162,28 @@ CREATE TABLE MeetingAttendee
     Confirmed BOOLEAN
 );
 COMMIT;
+
+
+# Alright let's do this later
+SELECT * FROM Users {0};
+SELECT UserID FROM Users WHERE (Username = '{0}');
+INSERT INTO Users(Name, Username, Password, Permissions) VALUES({0});
+INSERT INTO Meetings(OwnerID, Title, ISOTime, Location, Attendees) VALUES({0});
+SELECT * FROM Meetings {0};
+SELECT * FROM MeetingAttendee WHERE (UserID = {0} AND Confirmed = 0);
+SELECT MeetingID FROM Meetings {0};
+INSERT INTO MeetingAttendee(MeetingID, UserID, Confirmed) VALUES({0});
+SELECT UserID FROM MeetingAttendee WHERE (MeetingID = {0})
+UPDATE MeetingAttendee SET Confirmed = 1 WHERE {0}
+UPDATE MeetingAttendee SET Confirmed = 0 WHERE {0}
+DELETE FROM MeetingAttendee WHERE {0}
+
+SELECT * FROM Tasks {0};
+
+SELECT TaskID FROM Tasks {0};
+INSERT INTO Tasks(Title, Description, Owner, Attendees) VALUES({0});
+SELECT Name FROM Users WHERE(UserID = {0})
+
 \end{sql}
 
 
