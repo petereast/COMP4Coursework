@@ -58,23 +58,26 @@
 \subsubsection{Data sources and destinations}
 Because the Church relies on information being shared between different people with different responsibilities, this information has to move between people.
 
-\begin{table}
-\centering
-\caption{My caption}
-\label{my-label}
-\begin{tabular}{llll}
-\hline
-\multicolumn{1}{|l|}{Source}             & \multicolumn{1}{l|}{Data}                     & \multicolumn{1}{l|}{Example}                                                                         & \multicolumn{1}{l|}{Destination}                       \\ \hline
-\multicolumn{1}{|l|}{Member}             & \multicolumn{1}{l|}{Name and Contact details} & \multicolumn{1}{l|}{John Smith, jsmith@mailmailmail.com}                                             & \multicolumn{1}{l|}{Membership Records}                \\ \hline
-\multicolumn{1}{|l|}{Appointment}        & \multicolumn{1}{l|}{Who, what when and where} & \multicolumn{1}{l|}{John smith, pastoral visit, 10:30 Thursday  4th Oct 2013, Church Meeting room 4} & \multicolumn{1}{l|}{Attendee's Diaries}                \\ \hline
-\multicolumn{1}{|l|}{Referral Ticket}    & \multicolumn{1}{l|}{Who and what}             & \multicolumn{1}{l|}{John Smith, Prayer Request for his niece's hospital visit}                       & \multicolumn{1}{l|}{Prayer Team's records}             \\ \hline
-\multicolumn{1}{|l|}{Support ticket}     & \multicolumn{1}{l|}{What and when}            & \multicolumn{1}{l|}{Faulty Microphone, Sunday xth of January.}                                       & \multicolumn{1}{l|}{Finance Team's \'to purchase\' list} \\ \hline
-\multicolumn{1}{|l|}{Cafe Order}         & \multicolumn{1}{l|}{What, when and how much}  & \multicolumn{1}{l|}{2x cup of tea, Thursday 4th Oct 2015, £3.65}                                     & \multicolumn{1}{l|}{Cafe Management's ledger}          \\ \hline
-\multicolumn{1}{|l|}{Resources Purchase} & \multicolumn{1}{l|}{What, when and how much}  & \multicolumn{1}{l|}{3x replacement microphone, 4x AA batteries; Wednesday 3rd Oct 2015, £215.30}     & \multicolumn{1}{l|}{Finance Team's ledger}             \\ \hline
-\multicolumn{1}{|l|}{}                   & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                                                                                & \multicolumn{1}{l|}{}                                  \\ \hline
+\begin{landscape}
 
-\end{tabular}
-\end{table}
+    \begin{table}
+    \centering
+    \caption{My caption}
+    \label{my-label}
+    \begin{tabular}{llll}
+    \hline
+    \multicolumn{1}{|l|}{Source}             & \multicolumn{1}{l|}{Data}                     & \multicolumn{1}{l|}{Example}                                                                         & \multicolumn{1}{l|}{Destination}                       \\ \hline
+    \multicolumn{1}{|l|}{Member}             & \multicolumn{1}{l|}{Name and Contact details} & \multicolumn{1}{l|}{John Smith, jsmith@mailmailmail.com}                                             & \multicolumn{1}{l|}{Membership Records}                \\ \hline
+    \multicolumn{1}{|l|}{Appointment}        & \multicolumn{1}{l|}{Who, what when and where} & \multicolumn{1}{l|}{John smith, pastoral visit, 10:30 Thursday  4th Oct 2013, Church Meeting room 4} & \multicolumn{1}{l|}{Attendee's Diaries}                \\ \hline
+    \multicolumn{1}{|l|}{Referral Ticket}    & \multicolumn{1}{l|}{Who and what}             & \multicolumn{1}{l|}{John Smith, Prayer Request for his niece's hospital visit}                       & \multicolumn{1}{l|}{Prayer Team's records}             \\ \hline
+    \multicolumn{1}{|l|}{Support ticket}     & \multicolumn{1}{l|}{What and when}            & \multicolumn{1}{l|}{Faulty Microphone, Sunday xth of January.}                                       & \multicolumn{1}{l|}{Finance Team's \'to purchase\' list} \\ \hline
+    \multicolumn{1}{|l|}{Cafe Order}         & \multicolumn{1}{l|}{What, when and how much}  & \multicolumn{1}{l|}{2x cup of tea, Thursday 4th Oct 2015, £3.65}                                     & \multicolumn{1}{l|}{Cafe Management's ledger}          \\ \hline
+    \multicolumn{1}{|l|}{Resources Purchase} & \multicolumn{1}{l|}{What, when and how much}  & \multicolumn{1}{l|}{3x replacement microphone, 4x AA batteries; Wednesday 3rd Oct 2015, £215.30}     & \multicolumn{1}{l|}{Finance Team's ledger}             \\ \hline
+    \multicolumn{1}{|l|}{}                   & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                                                                                & \multicolumn{1}{l|}{}                                  \\ \hline
+
+    \end{tabular}
+    \end{table}
+\end{landscape}
 
 
 \subsubsection{Algorithms}
@@ -168,8 +171,9 @@ Meeting Notification Process & NewMeetingID & Integer (ID) & 4 Bytes & Database 
 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{./Analysis/diagrams/dfp1.jpg}
+\end{figure}
+\begin{figure}[H]
 	\includegraphics[width=\textwidth]{./Analysis/diagrams/dfp2.jpg}
-
 \end{figure}
 
 \subsubsection{Volumetrics}
@@ -275,9 +279,11 @@ User(\underline{UserID}, UserFirstname, UserLastname, UserPasswordHash, Permissi
 
 Meeting(\underline{MeetingID}, MeetingOwner, MeetingTitle, MeetingDateTime, MeetingPlace, MeetingAttendees)
 
-UserMeeting(\underline{UserID}, \underline{MeetingID}, UserMeetingConfirmation)
+MeetingAttendee(\underline{UserID}, \underline{MeetingID}, UserMeetingConfirmation)
 
 Task(\underline{TaskID}, TaskTitle, TaskDescription, TaskOwner, TaskAttendees, TaskExpiry, Priority)
+
+TaskAttendee(\underline{TaskID}, \underline{UserID}, Confirmation)
 
 Resource(\underline{ResourceID}, ResourceName, ResourceCost, ResourceQuantity, ResourceRequiredQuantity)
 
