@@ -39,9 +39,9 @@
 
 % TODO: Define the software objects based on the ER diagrams.
 
-%TODO: Actuall redo my entity relationship diagram
+%TODO: This in object relationship diagram
 	\begin{figure}[H]
-		\inlcudegraphics[width=\textwidth]{./Design/diagrams/era.jpg}
+		\inlcudegraphics[width=\textwidth]{./Design/diagrams/orld.jpg}
 	\end{figure}
 
 \section{Prototyping}
@@ -105,7 +105,7 @@ Meeting(\underline{MeetingID}, MeetingOwner, MeetingTitle, MeetingDateTime, Meet
 
 MeetingAttendee(\underline{UserID}, \underline{MeetingID}, UserMeetingConfirmation)
 
-Task(\underline{TaskID}, TaskTitle, TaskDescription, TaskOwner, TaskAttendees, TaskExpiry, Priority)
+Task(\underline{TaskID}, TaskTitle, TaskDescription, TaskOwner, TaskExpiry, Priority)
 
 TaskAttendee(\underline{TaskID}, \underline{UserID}, Confirmed)
 
