@@ -14,8 +14,7 @@
 	% Put the mockflow PDF here
 
 \section{Hardware Specification}
-	The client software will have the same requirements as the python standard for 3.4 which are:
-	- 2.5Gib of Disk space
+	The software will run on a variety of desktop Windows PCs, Windows Laptops, Linux/UNIX Laptops/Desktops and Apple Mac Laptops all with varying screen resolutions and all from different generations of hardware.
 
 
 \section{Program Structure}
@@ -32,7 +31,7 @@
 
 % TODO: Remember to complete this in the analysis section
     \begin{figure}[H]
-        \inclucegraphics[width=\textwidth]{./Design/diagrams/ods.jpg}
+        \inclucegraphics[width=\textwidth]{./Design/diagrams/orld.jpg}
     \end{figure}
 
 \subsection{Class Definitions}
@@ -41,7 +40,7 @@
 
 %TODO: This in object relationship diagram
 	\begin{figure}[H]
-		\inlcudegraphics[width=\textwidth]{./Design/diagrams/orld.jpg}
+		\inlcudegraphics[width=\textwidth]{./Design/diagrams/ods.jpg}
 	\end{figure}
 
 \section{Prototyping}
@@ -72,7 +71,43 @@
 
 \subsection{Identification of all data input items}
 
+\begin{itemize}
+	\item Username
+	\item Password
+	\item User Real Name
+	\item User Permissions
+	\item Meetings
+	\item Meeting Title
+	\item Meeting Location
+	\item Meeting Attendees
+	\item Meeting Date & time
+	\item Task
+	\item Task Title
+	\item Task Description
+	\item Task Attendees
+	\item Resource
+	\item Resource Name
+	\item Resource Cost
+	\item Resource Quantity
+	\item Resource Required Quantity
+\end{itemize}
+
 \subsection{Identification of all data output items}
+
+\begin{itemize}
+	\item {All the meetings that the user owns or has confirmed their attendance
+	\\which includes:
+\end{itemize}
+		\begin{itemize}
+			\item Meeting Title
+			\item Meeting Location
+			\item Meeting Time & Database
+			\item A list of the attendees
+		\end{itemize}
+	\item 
+
+	}
+\end{itemize}
 
 \subsection{Explanation of how data output items are generated}
 
@@ -164,10 +199,10 @@ CREATE TABLE MeetingAttendee
 
 
 # Alright let's do this later
-SELECT * FROM Users {0};
-SELECT UserID FROM Users WHERE (Username = \'{0}\');
-INSERT INTO Users(Name, Username, Password, Permissions) VALUES({0});
-INSERT INTO Meetings(OwnerID, Title, ISOTime, Location, Attendees) VALUES(x, \'Meeting Title\', \'Meeting Time\',  ;
+SELECT * FROM Users WHERE UserID = x;
+SELECT UserID FROM Users WHERE (Username = \'p\');
+INSERT INTO Users(Name, Username, Password, Permissions) VALUES(\'Name\', \'Username\', \'Password\', 31);
+INSERT INTO Meetings(OwnerID, Title, ISOTime, Location) VALUES(x, \'Meeting Title\', \'Meeting Time\',  \'Location\');
 SELECT * FROM Meetings {0};
 SELECT * FROM MeetingAttendee WHERE (UserID = {0} AND Confirmed = 0);
 SELECT MeetingID FROM Meetings {0};
