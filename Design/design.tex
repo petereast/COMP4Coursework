@@ -23,7 +23,7 @@
 
 % TODO: Include the diagrams from draw.io here
 \begin{figure}
-	\includegraphics[width=\textwidth]{./Design/tdsl.png}	
+	\includegraphics[width=\textwidth]{./Design/tdsl.png}
 \end{figure}
 
 \subsection{Algorithms in pseudo-code for each data transformation process}
@@ -231,7 +231,6 @@ SELECT Name FROM Users WHERE(UserID = x)
 
 \end{sql}
 
-
 \section{Security and Integrity of the System and Data}
 
 \subsection{Security and Integrity of Data}
@@ -251,6 +250,33 @@ SELECT Name FROM Users WHERE(UserID = x)
 
 \section{Validation}
 	%TODO: how tf do i do this?
+
+	\begin{figure}
+		\begin{table}[width=\textwidth]
+\centering
+\begin{tabular}{llll}
+\hline
+\multicolumn{1}{|l|}{Item}                       & \multicolumn{1}{l|}{Example}                                          & \multicolumn{1}{l|}{Validation}                                              & \multicolumn{1}{l|}{Comments}                                                                                                                                                                                                                                                                                    \\ \hline
+\multicolumn{1}{|l|}{Username}                   & \multicolumn{1}{l|}{username1}                                        & \multicolumn{1}{l|}{Presence Check, Verified against the database}           & \multicolumn{1}{l|}{The entry form immediately cancels it's verification if left empty, obviously the username is checked against the database to determine if it's a valid user.}                                                                                                                               \\ \hline
+\multicolumn{1}{|l|}{Password}                   & \multicolumn{1}{l|}{Pa\$\$w0rd}                                        & \multicolumn{1}{l|}{Presence Check, checksum verified against the database.} & \multicolumn{1}{l|}{The entry form immediately cancels if this is left blank, if not left blank, the system will generate a hash of the user's input and then check that against the hash stored in the database.}                                                                                               \\ \hline
+\multicolumn{1}{|l|}{Meeting Title}              & \multicolumn{1}{l|}{Dinner With the Smiths}                           & \multicolumn{1}{l|}{Presence Check}                                          & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}To ensure that a title is entered, this is how the meetings are identified for the user, so it's essential\\  that they have a name. Because often there are recurring meetings, it is not necessary to ensure that \\ the meeting title is unique.\end{tabular}} \\ \hline
+\multicolumn{1}{|l|}{Meeting Attendees}          & \multicolumn{1}{l|}{username1, username2}                             & \multicolumn{1}{l|}{Validated against the database}                          & \multicolumn{1}{l|}{Usernames which are not recognised are not used when adding the MeetingAttendee database entries. The user should be informed when an invalid username is entered.}                                                                                                                          \\ \hline
+\multicolumn{1}{|l|}{Meeting Location}           & \multicolumn{1}{l|}{Norwich Forum}                                    & \multicolumn{1}{l|}{Presence Check}                                          & \multicolumn{1}{l|}{The user is informed if the location field is left empty and the form will refuse to submit.}                                                                                                                                                                                                \\ \hline
+\multicolumn{1}{|l|}{Meeting Start Date \& Time} & \multicolumn{1}{l|}{1/28/16 7:54PM}                                   & \multicolumn{1}{l|}{Discrete set of values}                                  & \multicolumn{1}{l|}{This will be a spin box, which is a widget that only allows the user to select input from a set list of values.}                                                                                                                                                                             \\ \hline
+\multicolumn{1}{|l|}{Meeting End Date \& Time}   & \multicolumn{1}{l|}{2/21/16 3:36AM}                                   & \multicolumn{1}{l|}{Discrete set of values}                                  & \multicolumn{1}{l|}{As above but the minimum possible value will be set to the start date and time.}                                                                                                                                                                                                             \\ \hline
+\multicolumn{1}{|l|}{Task Title}                 & \multicolumn{1}{l|}{File A Tax Return}                                & \multicolumn{1}{l|}{Presence Check}                                          & \multicolumn{1}{l|}{If the field is left empty when the user attempts to submit the form, the form will not submit and the user will be reminded gently that that field is required.}                                                                                                                            \\ \hline
+\multicolumn{1}{|l|}{Task Attendees}             & \multicolumn{1}{l|}{username1, username2}                             & \multicolumn{1}{l|}{Validated against the database}                          & \multicolumn{1}{l|}{Usernames which are not recognised are not used when adding the TaskAttendee database entries. The user should be informed when an invalid username is entered.}                                                                                                                             \\ \hline
+\multicolumn{1}{|l|}{Task Description}           & \multicolumn{1}{l|}{Make sure you fill out every single little field} & \multicolumn{1}{l|}{Presence Check}                                          & \multicolumn{1}{l|}{If the field is left empty when the user attempts to submit the form, the form will not submit and the user will be reminded gently that that field is required.}                                                                                                                            \\ \hline
+\multicolumn{1}{|l|}{Resource Name}              & \multicolumn{1}{l|}{Teabags}                                          & \multicolumn{1}{l|}{Presence Check}                                          & \multicolumn{1}{l|}{If the field is left empty when the user attempts to submit the form, the form will not submit and the user will be reminded gently that that field is required.}                                                                                                                            \\ \hline
+Resource Quantity                                & 100                                                                   & Presence Check, Integer Validation                                           & If the field is left empty when the user attempts to submit the form, the form will not submit and the user will be reminded gently that that field is required. The system will attempt to change the value into an integer, if it fails it will notify the user and the form will not submit.                  \\
+Resource Cost                                    & £10.40                                                                & Presence check, regex check                                                  & If the field is left empty when the user attempts to submit the form, the form will not submit and the user will be reminded gently that that field is required. A regular expression will be used to check if the entered price is in a valid format (either  £\{int\}.\{int\} or \{int\}p)                     \\
+Resource Required Quantity                       & 200                                                                   & Presence Check, Integer Validation                                           & If the field is left empty when the user attempts to submit the form, the form will not submit and the user will be reminded gently that that field is required. The system will attempt to change the value into an integer, if it fails it will notify the user and the form will not submit.                  \\
+New Password                                     & P4\$\$w0Rd                                                             & Presence Check                                                               & If the field is left empty when the user attempts to submit the form, the form will not submit and the user will be reminded gently that that field is required.                                                                                                                                                 \\
+Confirm New Password                             & P4\$\$w0Rd                                                             & Presence Check, verified against field \"New Password\"                        & If the field is left empty or does not match the field \"New Password\"  when the user attempts to submit the form, the form will not submit and the user will be reminded gently that that field is required.                                                                                                     \\
+New Name                                         & Bob                                                                   & Presence Check, Regex check                                                  & If the field is left empty or contains invalid characters when scanned with a regular expression when the user attempts to submit the form, the form will not submit and the user will be reminded gently that that field is required.
+\end{tabular}
+\end{table}
+\end{figure}
 
 \section{Testing}
 
