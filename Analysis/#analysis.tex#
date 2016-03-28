@@ -1,4 +1,4 @@
-\chapter{Analysis}
+)\chapter{Analysis}
 
 \section{Introduction}
 	My client is a local church based in central Cambridge, they currently have a pen, paper and verbal system for organising many of the staff,
@@ -178,7 +178,8 @@ Meeting Notification Process & NewMeetingID & Integer (ID) & 4 Bytes & Database 
 
 \subsubsection{Volumetrics}
 	% The church has between 150 and 250 congregates meeting every week, of these congregates there are about 50 \'members\'. In the Baptist
-	%Church, a member is defined as someone who attends regularly enough and is commited to both Christianity and the Church who is able to 	make proposals and cast votes in the monthly Church administration meeting. This means that the scale of the databases required for staff
+	%Church, a member is defined as someone who attends regularly enough and is commited to both Christianity and the Church who is able to
+	make proposals and cast votes in the monthly Church administration meeting. This means that the scale of the databases required for staff
 	management will not be huge. However, for the meetings management elements of the system, there is not a limit to the number of meetings
 	and appointments that will be organised therfore this part of the system must be scaleable infinitely, or to the capacity of the current
 	hardware. The support and referral ticket system also must be able to scale to the needs of the congregation, it also needs to have an
